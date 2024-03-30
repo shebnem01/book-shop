@@ -9,7 +9,7 @@ import Reset from "../pages/auth/reset";
 import Register from "../pages/auth/register";
 import Login from "../pages/auth/login";
 import Basket from "../pages/basket";
-export const routes=createBrowserRouter([
+export const routes=[
     {
         path:"/",
         element:<Home/>,
@@ -50,4 +50,4 @@ export const routes=createBrowserRouter([
         path:"/checkout",
         element:<Checkout/>,
     },
-])
+]

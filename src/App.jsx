@@ -6,7 +6,6 @@ import Register from "./pages/auth/register";
 import Reset from "./pages/auth/reset";
 import Header from "./shared/components/header";
 import "./main.css";
-import Basket from "./pages/basket";
 import AllProducts from "./pages/allProducts";
 import CatalogSearch from "./pages/catalogSearch";
 import ProductDetails from "./pages/productDetails";
@@ -22,7 +21,6 @@ function App() {
         <Route path="product-details/:id" element={<ProductDetails />} />
         <Route path="/all-products" element={<AllProducts/>}/>
         <Route path="/catalogsearch" element={<CatalogSearch/>}/>
-        <Route path="/basket" element={<Basket />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset" element={<Reset />} />

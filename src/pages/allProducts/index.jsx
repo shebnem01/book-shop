@@ -10,6 +10,7 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+
 import {
   GET_FILTERED_PRODUCTS,
   PRICE_FILTER,
@@ -17,6 +18,7 @@ import {
   selSortType,
 } from "../../redux/slices/filterProductSlice";
 import Pagination from "../../shared/components/pagination";
+import ArrowDown from '../../assets/CustomIcons/ArrowDown'
 import { ITEMS_PER_PAGE } from "../../shared/constant";
 const AllProducts = () => {
   const filteredProduct = useSelector(selFilteredProduct);
@@ -68,30 +70,27 @@ const AllProducts = () => {
  
   return (
     <>
-      <div className="main-title">
-        <div className="container">Products</div>
+      <div className="text-xl font-medium border-t border-gray-200 border-b py-5 my-5">
+        <div className="px-20">Products</div>
       </div>
-      <div className="all-products-container">
-        <div className="container-fluid px-2">
-          <div className="row">
-            <div className="col-xl-3 col-lg-4 d-lg-block d-none">
-              <div className="filter-submenu">
-                <div className="submenu-header">
-                  <span>Filter</span>
-                  <button className="reset">reset</button>
+        <div className="px-20 flex ">
+         
+            <div className="w-[22%] h-screen overflow-y-auto pr-10">
+              
+                <div className="py-4 border-t border-gray-200 flex justify-between items-center">
+                  <span className="text-black text-lg font-medium">Filter</span>
+                  <button className="text-black text-xs font-normal leading-4 transition-colors duration-200">reset</button>
                 </div>
                 <div className="submenu-body">
-                  <div className="submenu-accordion">
-                    <div className="submenu-accordion-header">
-                      <span>genre</span>
-                      <div className="arrow-down">
-                        <FiChevronDown />
-                      </div>
+                  <div className="border-t border-gray-200">
+                    <div className="flex items-center cursor-pointer justify-between py-5">
+                      <span className="text-black text-base capitalize font-medium">genre</span>
+                      <ArrowDown/>
                     </div>
-                    <div className="submenu-accordion-body">
-                      <ul>
+                    <div className="body">
+                      <ul className="mb-6">
                         <li>
-                          <div className="check">
+                          <div className="text-sm font-normal leading-5 text-gray-700 cursor-pointer">
                             <label htmlFor="check">
                               <img src="./assets/images/Checkbox.svg" alt="" />
                               <img
@@ -104,254 +103,16 @@ const AllProducts = () => {
                             <input type="checkbox" id="check" />
                           </div>
                         </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
+                        
                       </ul>
                       <div className="view-all">view all</div>
                     </div>
                   </div>
-                  <div className="submenu-accordion">
-                    <div className="submenu-accordion-header">
-                      <span>Author</span>
-                      <div className="arrow-down">
-                        <FiChevronsDown />
-                      </div>
-                    </div>
-                    <div className="submenu-accordion-body">
-                      <ul>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                      </ul>
-                      <div className="view-all">view all</div>
-                    </div>
-                  </div>
-                  <div className="submenu-accordion">
-                    <div className="submenu-accordion-header">
-                      <span>Language</span>
-                      <div className="arrow-down">
-                        <FiChevronDown />
-                      </div>
-                    </div>
-                    <div className="submenu-accordion-body">
-                      <ul>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                        <li>
-                          <div className="check">
-                            <label htmlFor="check">
-                              <img src="./assets/images/Checkbox.svg" alt="" />
-                              <img
-                                className="hidden"
-                                src="./assets/images/not-check.svg"
-                                alt=""
-                              />
-                              Lorem
-                            </label>
-                            <input type="checkbox" id="check" />
-                          </div>
-                        </li>
-                      </ul>
-                      <div className="view-all">view all</div>
-                    </div>
-                  </div>
-                  <div className="submenu-accordion">
-                    <div className="submenu-accordion-header">
-                      <span>Publisher</span>
-                      <div className="arrow-down">
-                        <FiChevronDown />
-                      </div>
-                      <div className="submenu-accordion-body">
-                        <ul>
-                          <li>
-                            <div className="check">
-                              <label htmlFor="check">
-                                <img
-                                  src="./assets/images/Checkbox.svg"
-                                  alt=""
-                                />
-                                <img
-                                  className="hidden"
-                                  src="./assets/images/not-check.svg"
-                                  alt=""
-                                />
-                                Lorem
-                              </label>
-                              <input type="checkbox" id="check" />
-                            </div>
-                          </li>
-                          <li>
-                            <div className="check">
-                              <label htmlFor="check">
-                                <img
-                                  src="./assets/images/Checkbox.svg"
-                                  alt=""
-                                />
-                                <img
-                                  className="hidden"
-                                  src="./assets/images/not-check.svg"
-                                  alt=""
-                                />
-                                Lorem
-                              </label>
-                              <input type="checkbox" id="check" />
-                            </div>
-                          </li>
-                          <li>
-                            <div className="check">
-                              <label htmlFor="check">
-                                <img
-                                  src="./assets/images/Checkbox.svg"
-                                  alt=""
-                                />
-                                <img
-                                  className="hidden"
-                                  src="./assets/images/not-check.svg"
-                                  alt=""
-                                />
-                                Lorem
-                              </label>
-                              <input type="checkbox" id="check" />
-                            </div>
-                          </li>
-                        </ul>
-                        <div className="view-all">view all</div>
-                      </div>
-                    </div>
-                    <div className="submenu-accordion">
-                      <div className="submenu-accordion-header">
-                        <span>Price</span>
-                        <div className="arrow-down">
-                          <FiChevronDown />
-                        </div>
-                      </div>
-                      <div className="submenu-accordion-body">
-                        <div className="range-slider">
-                          <div className="result-container">
-                            <div className="min-num">
-                              <input
-                                type="number"
-                                min="0"
-                                max="115"
-                                id="result-min"
-                                name="min"
-                              />
-                            </div>
-                            <div className="max-num">
-                              <input
-                                type="number"
-                                min="0"
-                                max="115"
-                                id="result-max"
-                                name="max"
-                              />
-                            </div>
-                          </div>
-                          <div className="range-container">
-                            <input max="115" type="range" />
-
-                            <input type="range" min="0" max="115" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <button className="filter-btn">Axtar</button>
-                  </div>
+                  
                 </div>
               </div>
-            </div>
-            <div className="col-xl-9 col-lg-8">
+          
+            <div className="w-[78%]">
               <div className="product-items">
                 <div className="sort-products d-flex justify-content-end">
                   <div className="drop-down">
@@ -374,9 +135,9 @@ const AllProducts = () => {
                   </div>
                 </div>
                 <div className="products-boxes">
-                  <div className="row">
+                  <div className="flex flex-wrap">
                     {currentProducts?.map((product) => (
-                      <div key={product.id} className="col-xl-3 col-6">
+                      <div key={product.id} className="w-[30%]">
                         <SingleProduct product={product} />
                       </div>
                     ))}
@@ -408,9 +169,9 @@ const AllProducts = () => {
               </div>
             </div>
           </div>
-        </div>
+     
 
-        <div className="filter-submenu-modal">
+        {/* <div className="filter-submenu-modal">
           <div className="filter-submenu">
             <div className="submenu-header">
               <span>Filter</span>
@@ -680,8 +441,8 @@ const AllProducts = () => {
               <button className="filter-btn">Reset</button>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+    
     </>
   );
 };
